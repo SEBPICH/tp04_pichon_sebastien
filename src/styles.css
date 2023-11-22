@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #F5F5DC;
+    font-family: 'Raleway', cursive;
+    text-align: center;
+  }
+  
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+
+  nav {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .search-container, .product-list-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  .cart-title {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .search-container {
+    width: 48%; 
+    text-align: left; 
+  }
+  
+  .product-list-container {
+    width: 48%;
+    text-align: left;
+  }
+  
+  .search-container h2, .product-list-container h2 {
+    font-size: 24px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;   
+  }
+  
+  table, th, td {
+    margin-top: 15px;
+    background-color: #FFF;
+    border: 2px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  .results-container {
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    width: 48%;
+    text-align: left; 
+    font-family: 'Raleway', cursive; 
+  }
+  
+  .results-container h3 {
+    font-size: 24px; 
+  }
+  
+  .results-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .results-container ul li {
+
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+  
+  #noResults {
+    color: #777;
+  }
+  
+  .cart-button {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    padding: 10px;
+    background-color: #ffd5b3; 
+    color: Black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', cursive;
+    cursor: pointer; 
+  }
+
+  .cart-button:hover {
+    background-color: #aa8b72;
+  }
+  
+  .add-to-cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffd5b3; 
+    color: Black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', cursive;
+    cursor: pointer;
+  }
+
+  .add-to-cart-button:hover {
+    background-color: #aa8b72;
+}
+
+.remove-from-cart-button {
+  background-color: #ffd5b3; 
+  color: Black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Raleway', cursive;
+}
+
+.remove-from-cart-button:hover {
+  background-color: #aa8b72;
+}

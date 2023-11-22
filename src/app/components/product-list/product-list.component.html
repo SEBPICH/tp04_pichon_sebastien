@@ -1,0 +1,48 @@
+<!-- src/app/components/product-list/product-list.component.html -->
+<div *ngIf="confirmationMessage">
+        <div class="confirmation-message">
+            {{ confirmationMessage }}
+        </div>
+</div>
+<table>
+        
+    <thead>
+        
+        <tr>
+            <th>Numéro</th>
+            <th>Nom</th>
+            <th>Categorie</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let product of products">
+            
+            <tr>
+                <td>{{ product.num }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.price | currency:'EUR'}} </td>
+                
+                <button class="add-to-cart-button" (click)="addToCart(product)">Ajouter au panier</button>
+                
+            </tr>
+            
+        </ng-container>
+        
+        
+<!--    <div id="container" *ngIf="productList$ | async as products">
+            <div id="catalogue" *ngFor="let p of products">
+              <div>{{ p.ref }}</div>
+              <div>{{ p.name }}</div>
+              <div>{{ p.price }} $</div>
+              <div>{{ p.qte }}</div>
+              <button (click)="addToCart(p)"> Ajouter au panier </button>
+            </div>
+          </div> 
+    -->   
+
+
+
+    </tbody>
+</table>

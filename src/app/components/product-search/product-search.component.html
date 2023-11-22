@@ -1,0 +1,66 @@
+<!--src/app/components/product-search/product-search.component.html -->
+
+<div class="search-container">
+    <h2>Rechercher des produits</h2>
+    <form (ngSubmit)="searchProducts()">
+        <label for="productName">Nom du produit : </label>
+        <input type="text" id="productName" [(ngModel)]="searchTerm" name="productName" placeholder="Entrez le nom du produit">
+        <button type="submit">Rechercher</button>
+        
+    </form>
+    <div *ngIf="confirmationMessage" class="confirmation-message">
+        {{ confirmationMessage }}
+    </div>
+</div>
+<div class="results-container">
+    <h3>Résultat de la recherche '{{searchTerm}}' :</h3>
+    <ul *ngIf="filteredProducts.length > 0; else noResults"> 
+        <ng-container *ngFor="let product of filteredProducts">
+            <span>
+                {{ product.name }} ({{ product.category }}) {{ product.price | currency:'EUR'}}
+            </span>
+            <button class="add-to-cart-button" (click)="addToCart(product)">Ajouter au panier</button>
+            
+        </ng-container>
+    </ul>
+    <ng-template #noResults>
+        Aucun résultat trouvé.
+    </ng-template>
+</div>
+
+
+
+<!-- 
+<div class="search-container">
+    <h2>Rechercher des produits</h2>
+    <label for="productName">Nom du produit : </label>
+    <input type="text" id="productName" [(ngModel)]="searchTerm" name="productName" placeholder="Entrez le nom du produit">
+    Commenté pour éviter l'appel de la méthode searchProducts()
+    <button type="button" (click)="searchProducts()">Rechercher</button>
+  
+    <div *ngIf="confirmationMessage" class="confirmation-message">
+      {{ confirmationMessage }}
+    </div>
+  </div>
+  
+  <div class="results-container">
+    <h3>Résultat de la recherche '{{ searchTerm }}' :</h3>
+    <div *ngFor="let product of products$ | async">
+      <span>
+        {{ product.name }} ({{ product.category }}) {{ product.price | currency: 'EUR' }}
+      </span>
+      <button class="add-to-cart-button" (click)="addToCart(product)">Ajouter au panier</button>
+    </div>
+  
+    <ng-container *ngIf="(products$ | async)?.length === 0; else noResults">
+      Aucun résultat trouvé.
+    </ng-container>
+  
+    <ng-template #noResults>
+      <div>
+        Aucun résultat trouvé.
+      </div>
+    </ng-template>
+  </div>
+
+-->

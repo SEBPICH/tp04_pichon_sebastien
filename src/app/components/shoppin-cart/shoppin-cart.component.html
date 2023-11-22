@@ -1,0 +1,17 @@
+
+<div class="cart-title" *ngIf="cartItems.length != 0">Votre panier <i class="fas fa-shopping-cart"></i> : </div> 
+
+<div class="results-container" *ngFor="let item of cartItems; let i = index">
+    {{ item.name }} - {{ item.price | currency:'EUR' }}
+    <button class="remove-from-cart-button" (click)="removeFromCart(i)">Supprimer</button>
+</div>
+
+<div class="cart-title" *ngIf="cartItems.length === 0">Le panier <i class="fas fa-shopping-cart"></i> est vide.</div>
+
+
+<!--
+<div *ngFor="let p of list$ | async">
+    {{ p.name }} - {{ p.price | currency:'EUR' }}
+    <button (click)="removeFromCart">Supprimer</button>
+</div>
+-->

@@ -1,0 +1,9 @@
+.confirmation-message {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 5px; 
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
